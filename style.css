@@ -134,3 +134,40 @@ nav a:hover { color: #22d3ee; }
     margin-top: 15px;
     text-decoration: none;
 }
+
+/* Mobile adjustment, may not work properly*/
+@media (max-width: 768px) {
+    
+    nav {
+        padding: 8px 15px;
+        gap: 10px;
+        top: 10px;
+        flex-wrap: wrap;
+        border-radius: 20px;
+    }
+
+    nav a {
+        font-size: 0.7rem; 
+    }
+
+    .contact-link {
+        padding-left: 10px;
+    }
+
+
+    .container {
+        margin: 100px auto 40px;
+        padding: 15px;
+    }
+
+    
+    h1 {
+        font-size: 3rem !important; 
+    }
+
+
+    .swiper {
+        aspect-ratio: 16 / 9; 
+        border-radius: 12px;
+    }
+}
