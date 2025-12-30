@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liyaaz Yoosuf | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0a0a0a; color: #ededed; font-family: 'Inter', sans-serif; }
+        .bento-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            border-color: #22d3ee;
+            background: rgba(34, 211, 238, 0.05);
+            transform: translateY(-4px);
+        }
+        .glow { text-shadow: 0 0 20px rgba(34, 211, 238, 0.5); }
+    </style>
+</head>
+<body class="p-4 md:p-8 max-w-6xl mx-auto">
+
+    <header class="mb-12 text-center md:text-left animate-fade-in">
+        <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tighter">
+            HI, I'M <span class="text-cyan-400 glow">LIYAAZ.</span>
+        </h1>
+        <p class="text-xl text-gray-400 max-w-2xl">Computer Scientist, 3D Artist, and Researcher. Building digital worlds and robotic solutions.</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="md:col-span-2 md:row-span-2 bento-card p-8">
+            <h2 class="text-2xl font-bold mb-6 text-cyan-400 flex items-center gap-2">
+                <i class="fas fa-briefcase"></i> Work Experience
+            </h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="font-bold text-lg">Part-time Lecturer</h3>
+                    <p class="text-gray-400 text-sm">Maldives National University | Feb 2025 – Present</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">IT Intern</h3>
+                    <p class="text-gray-400 text-sm">Pension Administration Office | Aug – Nov 2025</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Research Assistant</h3>
+                    <p class="text-gray-400 text-sm">Maldives National University | 2024 – 2025</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Intern Electrician</h3>
+                    <p class="text-gray-400 text-sm">STO | 2021 – 2022</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-2 bento-card p-8 bg-gradient-to-br from-cyan-900/20 to-transparent">
+            <h2 class="text-2xl font-bold mb-2 flex items-center gap-2">
+                <i class="fas fa-cube"></i> 3D Modeling
+            </h2>
+            <p class="text-gray-400 mb-4">4+ years of experience in Blender 3D. Specializing in Video Game UI & Character Modeling.</p>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-white/10 rounded-full text-xs">Blender</span>
+                <span class="px-3 py-1 bg-white/10 rounded-full text-xs">Animation</span>
+                <span class="px-3 py-1 bg-white/10 rounded-full text-xs">UI/UX</span>
+            </div>
+        </div>
+
+        <div class="bento-card p-8">
+            <h2 class="text-xl font-bold mb-4">Stack</h2>
+            <ul class="space-y-2 text-gray-400">
+                <li class="flex items-center gap-2"><i class="fab fa-python text-yellow-400"></i> Python</li>
+                <li class="flex items-center gap-2"><i class="fab fa-java text-red-400"></i> Java</li>
+                <li class="flex items-center gap-2"><i class="fas fa-code text-blue-400"></i> C++ / MySQL</li>
+            </ul>
+        </div>
+
+        <div class="bento-card p-8">
+            <h2 class="text-xl font-bold mb-4">Papers</h2>
+            <p class="text-xs text-gray-500 uppercase tracking-widest mb-2">Latest Publication</p>
+            <p class="text-sm font-medium leading-tight mb-4">ICEST 2025: 3D Video Game for Dhivehi Phrases.</p>
+            <a href="https://doi.org/10.70592/mjet.2025.2.02.003" target="_blank" class="text-cyan-400 text-sm hover:underline">Read Paper →</a>
+        </div>
+
+        <div class="md:col-span-2 bento-card p-8">
+            <h2 class="text-2xl font-bold mb-4">Education</h2>
+            <div class="flex justify-between items-center border-b border-white/5 pb-4 mb-4">
+                <div>
+                    <h3 class="font-bold">BSc Computer Science</h3>
+                    <p class="text-gray-400 text-sm">Maldives National University</p>
+                </div>
+                <span class="text-cyan-400 font-mono">GPA 2.75</span>
+            </div>
+            <div class="text-sm text-gray-500">
+                A'Levels: Maths(B), Physics(B), Biology(B)
+            </div>
+        </div>
+
+        <div class="md:col-span-2 bento-card p-8 flex flex-col justify-center items-center text-center">
+            <h2 class="text-2xl font-bold mb-2">Let's Connect</h2>
+            <p class="text-gray-400 mb-6">Open for collaboration on 3D and Web projects.</p>
+            <a href="mailto:liyaazy1@gmail.com" class="px-8 py-3 bg-cyan-500 text-black font-bold rounded-xl hover:bg-cyan-400 transition-colors">
+                liyaazy1@gmail.com
+            </a>
+        </div>
+    </div>
+
+    <footer class="mt-20 text-center text-gray-600 text-sm">
+        <p>© 2025 Liyaaz Yoosuf. Built for GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
