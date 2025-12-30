@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
-/* --- GLOBAL SETTINGS --- */
 body {
     background-color: #050505;
     color: #e0e0e0;
@@ -10,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- NAVIGATION BAR --- */
+
 nav {
     position: fixed;
     top: 20px;
@@ -48,14 +47,12 @@ nav a:hover { color: #22d3ee; }
     padding-left: 15px;
 }
 
-/* --- GRID & CONTAINERS --- */
 .container { 
     max-width: 1100px; 
     margin: 120px auto; 
     padding: 20px; 
 }
 
-/* --- BENTO TILES (Home Page) --- */
 .tile {
     background: #111;
     border: 1px solid #222;
@@ -100,8 +97,7 @@ nav a:hover { color: #22d3ee; }
     text-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
 }
 
-/* --- SWIPER CAROUSEL (Blender Page) --- */
-/* Fixed: Removed fixed height 400px to allow aspect-ratio to work */
+
 .swiper { 
     width: 100%; 
     aspect-ratio: 16 / 9; 
@@ -117,17 +113,17 @@ nav a:hover { color: #22d3ee; }
     background: #000;
 }
 
-/* Fixed: Forced full image visibility for carousels */
+
 .swiper-slide img, 
 .swiper-slide video { 
     max-width: 100%; 
     max-height: 100%; 
     width: auto !important;
     height: auto !important;
-    object-fit: contain !important; /* This ensures the whole image shows */
+    object-fit: contain !important; 
 }
 
-/* --- BUTTONS & UTILS --- */
+
 .btn-primary {
     background: #22d3ee;
     color: #000;
