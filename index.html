@@ -23,31 +23,35 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <a href="blender.html" class="tile md:col-span-2 h-80 group">
-                    <img src="Images/Acosta.png" alt="3D model" class="tile-img absolute inset-0">
-                    <div class="tile-content mt-auto">
-                        <h2 class="text-3xl font-bold text-white">3D Design & Animation</h2>
-                        <p class="text-gray-300 text-sm">Blender portfolio: Motion graphics, rigging, and stylized renders.</p>
+                <a href="blender.html" class="tile md:col-span-2 h-80 group relative flex flex-col justify-end overflow-hidden rounded-3xl">
+                    <img src="Images/Acosta.png" alt="3D model" class="tile-img absolute inset-0 w-full h-full object-cover z-0">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 p-8">
+                        <h2 class="text-3xl font-bold text-white uppercase tracking-tighter">3D Design & Animation</h2>
+                        <p class="text-cyan-400 font-medium">Blender Portfolio</p>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Motion graphics, rigging, and stylized renders.</p>
                     </div>
                 </a>
 
-                <a href="game.html" class="tile md:col-span-1 h-80 group">
-                    <img src="Images/Game.png" alt="Adhabeebas Game" class="tile-img absolute inset-0">
-                    <div class="tile-content mt-auto">
-                        <h2 class="text-2xl font-bold text-white">Adhabee Bas Game</h2>
-                        <p class="text-gray-300 text-sm">Teaching Dhivehi phrases through 3D gaming.</p>
+                <a href="game.html" class="tile md:col-span-1 h-80 group relative flex flex-col justify-end overflow-hidden rounded-3xl">
+                    <img src="Images/Game.png" alt="Adhabeebas Game" class="tile-img absolute inset-0 w-full h-full object-cover z-0">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                    <div class="relative z-20 p-8">
+                        <h2 class="text-2xl font-bold text-white uppercase tracking-tighter">Adhabee Bas</h2>
+                        <p class="text-cyan-400 font-medium">Educational Gaming</p>
                     </div>
                 </a>
 
-                <a href="papers.html" class="tile md:col-span-2 h-64 group bg-cyan-950/20">
-                    <div class="flex h-full items-center">
-                        <div class="w-1/3 h-full overflow-hidden">
-                            <img src="Images/paper.png" alt="Research" class="tile-img">
-                        </div>
-                        <div class="w-2/3 p-8">
-                            <h2 class="text-2xl font-bold italic text-cyan-400">Published Papers →</h2>
-                            <p class="text-gray-400">Scientific research in Robotics & Educational Gaming.</p>
-                        </div>
+                <a href="papers.html" class="tile md:col-span-2 h-64 group relative flex items-center overflow-hidden rounded-3xl bg-zinc-900">
+                    <div class="absolute inset-0 z-0 opacity-40">
+                        <img src="Images/paper.png" alt="Research" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10"></div>
+                    <div class="relative z-20 p-10">
+                        <h2 class="text-3xl font-bold italic text-cyan-400">Published Papers →</h2>
+                        <p class="text-gray-300 max-w-md mt-2">Scientific research in Robotics and Educational Gaming published in MJET and AIP.</p>
                     </div>
                 </a>
 
