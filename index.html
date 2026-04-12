@@ -1,62 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Liyaaz Yoosuf | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script> </head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liyaaz Yoosuf — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Portfolio of programming and multimedia work." />
+</head>
 <body>
-
-    <nav>
-    <a href="index.html" class="text-cyan-400">Home</a>
-    <a href="blender.html">3D & Animation</a>
-    <a href="software.html">Softwares</a>
-    <a href="papers.html">Research</a>
-    <a href="about.html">About/CV</a> <a href="mailto:liyaazy1@gmail.com">Contact</a>
-    </nav>
-
-    <div class="container">
-        <header class="mb-16">
-            <h1 class="text-7xl font-black tracking-tighter mb-4">LIYAAZ<span class="text-cyan-400"> Yoosuf</span></h1>
-            <p class="text-gray-500 text-xl">CS Graduate | 3D Artist | Researcher</p>
-        </header>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <a href="blender.html" class="tile md:col-span-2 h-80 group relative flex flex-col justify-end overflow-hidden rounded-3xl">
-                    <img src="Images/Acosta.png" alt="3D model" class="tile-img absolute inset-0 w-full h-full object-cover z-0">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
-                    
-                    <div class="relative z-20 p-8">
-                        <h2 class="text-3xl font-bold text-white uppercase tracking-tighter">3D Design & Animation</h2>
-                        <p class="text-cyan-400 font-medium">Blender Portfolio</p>
-                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Motion graphics, rigging, and stylized renders.</p>
-                    </div>
-                </a>
-
-                <a href="game.html" class="tile md:col-span-1 h-80 group relative flex flex-col justify-end overflow-hidden rounded-3xl">
-                    <img src="Images/Game.png" alt="Adhabeebas Game" class="tile-img absolute inset-0 w-full h-full object-cover z-0">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
-                    <div class="relative z-20 p-8">
-                        <h2 class="text-2xl font-bold text-white uppercase tracking-tighter">Adhabee Bas</h2>
-                        <p class="text-cyan-400 font-medium">Educational Gaming</p>
-                    </div>
-                </a>
-
-                <a href="papers.html" class="tile md:col-span-2 h-64 group relative flex items-center overflow-hidden rounded-3xl bg-zinc-900">
-                    <div class="absolute inset-0 z-0 opacity-40">
-                        <img src="Images/paper.png" alt="Research" class="w-full h-full object-cover">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10"></div>
-                    <div class="relative z-20 p-10">
-                        <h2 class="text-3xl font-bold italic text-cyan-400">Published Papers →</h2>
-                        <p class="text-gray-300 max-w-md mt-2">Scientific research in Robotics and Educational Gaming published in MJET and AIP.</p>
-                    </div>
-                </a>
-
-            </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Liyaaz Yoosuf</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="programming.html">Programming</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="education.html">Education & Experience</a>
+        <a href="papers.html">Papers</a>
+        <a href="achievements.html">Achievements</a>
+      </nav>
     </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Hi — I'm Liyaaz Yoosuf</h1>
+        <p class="lead">I build software and multimedia projects that communicate ideas clearly and beautifully. Browse my programming work, multimedia projects, publications and achievements.</p>
+        <div class="actions">
+          <a class="btn" href="programming.html">View Programming Work</a>
+          <a class="btn ghost" href="multimedia.html">View Multimedia Work</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured">
+      <h2>Featured Work</h2>
+      <div class="grid">
+        <article class="card">
+          <a href="programming/project-alpha.html">
+            <div class="thumb"><img src="images/thumb-project-alpha.svg" alt="Project Alpha thumbnail"></div>
+            <h3>Project Alpha</h3>
+            <p>Full-stack web application with real-time features and data visualizations.</p>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="multimedia/multimedia-sample-1.html">
+            <div class="thumb"><img src="images/thumb-multimedia-1.svg" alt="Waves short film thumbnail"></div>
+            <h3>Short Film — "Waves"</h3>
+            <p>Color grading, sound design and editing for an experimental short film.</p>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Liyaaz Yoosuf — Built with HTML, CSS & JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
