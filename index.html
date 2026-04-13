@@ -1,72 +1,112 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Liyaaz Yoosuf — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <meta name="description" content="Portfolio of programming and multimedia work." />
+  <meta name="description" content="Portfolio of Liyaaz Yoosuf — programming and multimedia projects">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script defer src="/js/main.js"></script>
 </head>
-<body>
+<body class="site">
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html">Liyaaz Yoosuf</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="programming.html">Programming</a>
-        <a href="multimedia.html">Multimedia</a>
-        <a href="education.html">Education & Experience</a>
-        <a href="papers.html">Papers</a>
-        <a href="achievements.html">Achievements</a>
+      <a class="brand" href="/">Liyaaz Yoosuf</a>
+      <nav class="main-nav" id="nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/programming.html">Programming</a></li>
+          <li><a href="/pages/multimedia.html">Multimedia</a></li>
+          <li><a href="/pages/education.html">Education & Experience</a></li>
+          <li><a href="/pages/papers.html">Papers</a></li>
+          <li><a href="/pages/achievements.html">Achievements</a></li>
+        </ul>
       </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"></button>
     </div>
   </header>
 
   <main class="container">
-    <section class="hero">
-      <div class="hero-inner">
-        <h1>Hi — I'm Liyaaz Yoosuf</h1>
-        <p class="lead">I build software and multimedia projects that communicate ideas clearly and beautifully. Browse my programming work, multimedia projects, publications and achievements.</p>
-        <div class="actions">
-          <a class="btn" href="programming.html">View Programming Work</a>
-          <a class="btn ghost" href="multimedia.html">View Multimedia Work</a>
+    <section class="hero reveal">
+      <div class="hero-left">
+        <h1 class="hero-title">Hi, I'm <span class="accent">Liyaaz</span></h1>
+        <p class="hero-desc">I build software, visuals and research that combine clean code with creative multimedia.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="/pages/programming.html">Programming Work</a>
+          <a class="btn btn-ghost" href="/pages/multimedia.html">Multimedia Work</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="profile-card">
+          <img src="Images/profile.jpg" alt="Profile" onerror="this.style.display='none'">
+          <div class="card-decor"></div>
         </div>
       </div>
     </section>
 
-    <section class="featured">
-      <h2>Featured Work</h2>
+    <section class="featured reveal">
+      <h2>Featured Projects</h2>
       <div class="grid">
         <article class="card">
-          <a href="programming/project-alpha.html">
-            <div class="thumb"><img src="images/thumb-project-alpha.svg" alt="Project Alpha thumbnail"></div>
-            <h3>Project Alpha</h3>
-            <p>Full-stack web application with real-time features and data visualizations.</p>
+          <a href="/projects/programming/project1.html">
+            <div class="card-media">
+              <img src="Images/prog1.jpg" alt="Programming project 1" onerror="this.style.background='linear-gradient(135deg,var(--accent),var(--accent-2))'">
+            </div>
+            <div class="card-body">
+              <h3>Project One</h3>
+              <p>A short description of a programming project. Click to view details.</p>
+            </div>
           </a>
         </article>
 
         <article class="card">
-          <a href="multimedia/multimedia-sample-1.html">
-            <div class="thumb"><img src="images/thumb-multimedia-1.svg" alt="Waves short film thumbnail"></div>
-            <h3>Short Film — "Waves"</h3>
-            <p>Color grading, sound design and editing for an experimental short film.</p>
+          <a href="/projects/multimedia/mm1.html">
+            <div class="card-media">
+              <img src="Images/mm1.jpg" alt="Multimedia project 1" onerror="this.style.background='linear-gradient(135deg,var(--accent-2),var(--accent-3))'">
+            </div>
+            <div class="card-body">
+              <h3>Multimedia Piece One</h3>
+              <p>Creative multimedia work blending video and visuals. Click to view details.</p>
+            </div>
           </a>
         </article>
 
+        <article class="card">
+          <a href="/pages/education.html">
+            <div class="card-media" style="background:linear-gradient(135deg,var(--accent-3),#0a0a0a);height:140px"></div>
+            <div class="card-body">
+              <h3>Education & Experience</h3>
+              <p>Degrees, courses and work experience highlights.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="/pages/papers.html">
+            <div class="card-media" style="background:linear-gradient(135deg,var(--accent),var(--accent-2));height:140px"></div>
+            <div class="card-body">
+              <h3>Publications</h3>
+              <p>Links to published papers and conference work.</p>
+            </div>
+          </a>
+        </article>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; 2026 Liyaaz Yoosuf — Built with HTML, CSS & JavaScript</p>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="muted">© 2026 Liyaaz Yoosuf — Built with HTML, CSS & JavaScript</p>
+        <div class="social">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
     </div>
   </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,19 +1,21 @@
-# Portfolio Website (Static)
+# Portfolio website
 
-This repository contains a static portfolio website built with plain HTML, CSS and JavaScript suitable for GitHub Pages.
+This repository contains a static portfolio website built with HTML, CSS and JavaScript. It's designed for GitHub Pages (user site). Files created:
 
-How to use
-- Edit the pages in the root (`index.html`, `programming.html`, `multimedia.html`, `education.html`, `papers.html`, `achievements.html`).
-- Add project detail pages under the `programming/` and `multimedia/` folders.
-- Replace the sample thumbnails in `images/` and add your media to `Images/` or `Videos/` if you prefer.
+- `index.html` — Main landing page
+- `css/style.css` — Theme and animations (dark, green-analogous palette)
+- `js/main.js` — Navigation, reveal animations and transitions
+- `pages/` — Secondary pages (programming, multimedia, education, papers, achievements)
+- `projects/` — Example project detail pages for programming and multimedia
+- `Images/` and `Videos/` — Use these existing folders for your media assets
 
-Deploy to GitHub Pages
-- If this repository is named `username.github.io`, push to the `main` branch — GitHub Pages will serve the site at `https://username.github.io`.
-- Alternatively enable Pages in repository Settings and choose the `main` branch and `/ (root)`.
+Quick start
+
+1. Add your images to the `Images/` folder and videos to `Videos/`.
+2. Edit the project pages in `projects/` and listing pages in `pages/` to add your content.
+3. Push to the `main` branch of the repository named `YourUsername.github.io` to publish.
 
 Customization
-- Global styles are in `css/style.css`.
-- The small client script is `js/main.js` (mobile nav + simple lightbox behavior).
 
-Notes
-- This site is intentionally static and minimal so it works with GitHub Pages without build steps.
+- Replace placeholder text and images with your real content.
+- Add more project detail pages under `projects/programming/` or `projects/multimedia/`.

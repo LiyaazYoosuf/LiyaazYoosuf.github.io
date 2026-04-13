@@ -1,38 +1,27 @@
 document.addEventListener('DOMContentLoaded', function(){
-  const toggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-  if(toggle && nav){
-    toggle.addEventListener('click', ()=> nav.classList.toggle('open'));
+  const navToggle = document.getElementById('navToggle');
+  if(navToggle) navToggle.addEventListener('click', () => document.body.classList.toggle('nav-open'));
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  function isLocalLink(a){
+    const href = a.getAttribute('href') || '';
+    return !(href.startsWith('mailto:')||href.startsWith('tel:')||a.target) && (href.startsWith('/') || !href.startsWith('http'));
   }
 
-  document.body.addEventListener('click', (e)=>{
-    const img = e.target.closest('.gallery img, .thumb img');
-    if(!img) return;
-    const src = img.dataset.src || img.src || img.getAttribute('src');
-    if(!src) return;
-    e.preventDefault();
-    openLightbox(src, img.dataset.type || 'image');
+  Array.from(document.querySelectorAll('a[href]')).forEach(a => {
+    if(!isLocalLink(a)) return;
+    a.addEventListener('click', (ev)=>{
+      const href = a.getAttribute('href');
+      if(href.startsWith('#')) return;
+      ev.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(()=> window.location = href, 240);
+    });
   });
 
-  function openLightbox(src, type){
-    const wrapper = document.createElement('div');
-    wrapper.className = 'lightbox';
-    const inner = document.createElement('div');
-    inner.className = 'lightbox-inner';
-    if(type === 'video' || /\.mp4$/.test(src)){
-      const v = document.createElement('video');
-      v.src = src; v.controls = true; v.autoplay = true;
-      inner.appendChild(v);
-    } else {
-      const i = document.createElement('img');
-      i.src = src; i.alt = '';
-      inner.appendChild(i);
-    }
-    wrapper.appendChild(inner);
-    wrapper.addEventListener('click', ()=> wrapper.remove());
-    document.body.appendChild(wrapper);
-    function onKey(e){ if(e.key === 'Escape') { wrapper.remove(); document.removeEventListener('keydown', onKey); } }
-    document.addEventListener('keydown', onKey);
-  }
-
+  window.addEventListener('pageshow', ()=> document.body.classList.remove('fade-out'));
 });
