@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', function(){
   const navToggle = document.getElementById('navToggle');
-  if(navToggle) navToggle.addEventListener('click', () => document.body.classList.toggle('nav-open'));
+  if(navToggle){
+    // ensure accessible state
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.addEventListener('click', () => {
+      const isOpen = document.body.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
 
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
