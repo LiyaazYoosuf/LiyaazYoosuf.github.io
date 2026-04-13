@@ -95,6 +95,15 @@ body.fade-out{opacity:0;transition:opacity 260ms ease-in}
   .paper-actions{flex-direction:column;align-items:flex-start}
 }
 
+/* Lightbox overlay for gallery images */
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.85);z-index:22000;padding:2rem}
+.lightbox.open{display:flex;animation:lightboxFadeIn 220ms ease}
+.lightbox__img{max-width:92%;max-height:92%;object-fit:contain;border-radius:8px;box-shadow:0 12px 60px rgba(0,0,0,0.8)}
+.lightbox__close{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,0.06);border:none;color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:22001}
+.lightbox__close:focus{outline:2px solid var(--accent)}
+.card-media img,.grid img{cursor:zoom-in}
+@keyframes lightboxFadeIn{from{opacity:0}to{opacity:1}}
+
 /* Ensure hamburger only visible on narrow screens */
 @media (min-width:901px){
   .nav-toggle{display:none !important}
